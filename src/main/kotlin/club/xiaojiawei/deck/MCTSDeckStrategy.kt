@@ -4,7 +4,7 @@ import club.xiaojiawei.DeckStrategy
 import club.xiaojiawei.bean.EmptyAction
 import club.xiaojiawei.bean.MCTSArg
 import club.xiaojiawei.bean.War
-import club.xiaojiawei.config.log
+import club.xiaojiawei.hsscriptbase.config.log
 import club.xiaojiawei.mcts.MonteCarloTreeSearch
 import club.xiaojiawei.status.WAR
 

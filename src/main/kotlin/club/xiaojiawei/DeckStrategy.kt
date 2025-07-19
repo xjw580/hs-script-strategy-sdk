@@ -1,7 +1,7 @@
 package club.xiaojiawei
 
 import club.xiaojiawei.bean.Card
-import club.xiaojiawei.enums.RunModeEnum
+import club.xiaojiawei.hsscriptbase.enums.RunModeEnum
 import java.util.*
 
 /**
