@@ -1,12 +1,12 @@
-package club.xiaojiawei.deck
+package club.xiaojiawei.hsscriptstrategysdk.deck
 
-import club.xiaojiawei.DeckStrategy
-import club.xiaojiawei.bean.EmptyAction
-import club.xiaojiawei.bean.MCTSArg
-import club.xiaojiawei.bean.War
+import club.xiaojiawei.hsscriptstrategysdk.DeckStrategy
+import club.xiaojiawei.hsscriptcardsdk.bean.EmptyAction
+import club.xiaojiawei.hsscriptcardsdk.bean.MCTSArg
+import club.xiaojiawei.hsscriptcardsdk.bean.War
 import club.xiaojiawei.hsscriptbase.config.log
-import club.xiaojiawei.mcts.MonteCarloTreeSearch
-import club.xiaojiawei.status.WAR
+import club.xiaojiawei.hsscriptcardsdk.mcts.MonteCarloTreeSearch
+import club.xiaojiawei.hsscriptcardsdk.status.WAR
 
 /**
  * 蒙特卡洛树搜索算法

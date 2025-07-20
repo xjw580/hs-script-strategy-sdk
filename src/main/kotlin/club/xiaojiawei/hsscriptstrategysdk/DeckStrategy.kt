@@ -1,8 +1,9 @@
-package club.xiaojiawei
+package club.xiaojiawei.hsscriptstrategysdk
 
-import club.xiaojiawei.bean.Card
 import club.xiaojiawei.hsscriptbase.enums.RunModeEnum
-import java.util.*
+import club.xiaojiawei.hsscriptcardsdk.bean.Card
+import java.util.HashSet
+import java.util.Objects
 
 /**
  * @author 肖嘉威
