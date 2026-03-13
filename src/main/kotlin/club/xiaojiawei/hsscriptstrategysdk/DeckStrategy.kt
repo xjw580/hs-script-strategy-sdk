@@ -2,8 +2,7 @@ package club.xiaojiawei.hsscriptstrategysdk
 
 import club.xiaojiawei.hsscriptbase.enums.RunModeEnum
 import club.xiaojiawei.hsscriptcardsdk.bean.Card
-import java.util.HashSet
-import java.util.Objects
+import java.util.*
 
 /**
  * @author 肖嘉威
@@ -93,6 +92,12 @@ abstract class DeckStrategy {
      */
     abstract fun executeDiscoverChooseCard(vararg cards: Card): Int
 
+    /**
+     * 执行选择时间线
+     * @param timeLineEvent 时间线事件，保持或者回溯
+     */
+    open fun execChooseTimeLine(timeLineEvent: TimelineEvent) {}
+
     override fun equals(other: Any?): Boolean {
         if (this === other) return true
         if (other == null || javaClass != other.javaClass) return false
@@ -101,4 +106,27 @@ abstract class DeckStrategy {
     }
 
     override fun hashCode(): Int = Objects.hashCode(id())
+}
+
+class TimelineEvent(private val rewindCard: Card, private val keepCard: Card) {
+    var chooseEventCard = keepCard
+        private set
+
+    fun isKeepTime(): Boolean {
+        return chooseEventCard === keepCard
+    }
+
+    /**
+     * 维持时间线
+     */
+    fun keep() {
+        chooseEventCard = keepCard
+    }
+
+    /**
+     * 回溯时间线
+     */
+    fun rewind() {
+        chooseEventCard = rewindCard
+    }
 }
