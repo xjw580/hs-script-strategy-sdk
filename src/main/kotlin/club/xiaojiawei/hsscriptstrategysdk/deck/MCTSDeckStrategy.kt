@@ -35,7 +35,7 @@ abstract class MCTSDeckStrategy : DeckStrategy() {
                         mctsArg.enableMultiThread,
                     )
                 val bestNodes = monteCarloTreeSearch.searchBestNode(war, arg).filter { it.applyAction !is EmptyAction }
-                log.info { "思考耗时：${System.currentTimeMillis() - start}ms，执行动作数：${bestNodes.size}，得分：${bestNodes.lastOrNull()?.state?.score}" }
+                log.info { "思考耗时：${System.currentTimeMillis() - start}ms，执行动作数：${bestNodes.size}，得分：${bestNodes.lastOrNull()?.state?.score?:"--"}" }
                 var continueCurrent = false
                 for (action in bestNodes) {
                     val applyAction = action.applyAction
